@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert UX Critique & Teardown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold text-xl tracking-tight text-brand-900">
+                <i data-lucide="scan-line" class="w-6 h-6 text-brand-600"></i>
+                UX Roast
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#how-it-works" class="hover:text-brand-600 transition-colors">How it works</a>
+                <a href="#deliverables" class="hover:text-brand-600 transition-colors">What you get</a>
+                <a href="#pricing" class="hover:text-brand-600 transition-colors">Pricing</a>
+            </div>
+            <a href="#pricing" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm hover:shadow-md">
+                Get a Critique
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 md:pt-40 md:pb-28 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-6 border border-brand-100">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Currently accepting new tear-downs
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
+                Stop guessing why your users are <span class="text-brand-600 relative whitespace-nowrap">bouncing.<svg class="absolute -bottom-2 left-0 w-full text-brand-200 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0 10 Q 50 20 100 10" stroke="currentColor" stroke-width="4" fill="transparent"/></svg></span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                One-time purchase. No subscriptions. No sales pitches, just results. We'll audit your UX, identify exactly where you are losing conversions, and tell you how to fix it.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#pricing" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                    Book Your Teardown
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#example" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-4 rounded-full text-lg font-semibold transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="play-circle" class="w-5 h-5 text-slate-400"></i>
+                    View a Sample
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-slate-500 flex items-center justify-center gap-1.5">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+                Delivered in two weeks.
+            </p>
+        </div>
+    </header>
+
+    <!-- The Problem (Copy Placement Area) -->
+    <section class="py-20 bg-white" id="how-it-works">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-slate-900">Your product has grown weeds, and it's time for a gut check.</h2>
+                    <div class="space-y-4 text-slate-600 text-lg leading-relaxed">
+                        <p>
+                            A product design health report is crucial when your app is about to ship, or when you simply want to understand why your designs work well in Figma but don't end up looking correct in production code. 
+                        </p>
+                        <p>
+                            Like a supreme pizza, our teardown is turnkey. We point out where to start fixing things to have the most impact, giving you everything you need to keep your dev team busy for months.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative">
+                    <div class="absolute -top-4 -right-4 bg-brand-100 text-brand-700 p-3 rounded-xl shadow-sm rotate-6">
+                        <i data-lucide="frown" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-slate-900">Common UX Sins We Find:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-slate-700">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                            Unclear value propositions above the fold.
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-700">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                            Friction-heavy onboarding flows.
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-700">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                            Invisible or confusing calls-to-action.
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-700">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                            Mobile layouts that break down completely.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200" id="deliverables">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">What's in the box?</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">A comprehensive, no-nonsense package packed with actionable insights that can be easily implemented by your development team.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="file-text" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">10+ Page Report</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A detailed, in-depth audit of your interface, highlighting key friction points and usability sins.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="video" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">User Testing Videos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Short video clips of real users interacting with your app to illustrate key issues and opportunities.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="list-ordered" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">Prioritized Actions</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Improvements prioritized by potential impact and ease of implementation, so you know exactly where to start.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="image" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">Before & After Examples</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Visual examples of how proposed changes could look. Choose between a general site-wide audit or a deep dive into a specific workflow.</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="bar-chart-2" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">Industry Benchmarking</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">See how your app or website stacks up against industry best practices and direct competitors.</p>
+                </div>
+                <!-- Item 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">UX Education</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A brief overview of key UX principles included in your report so your team understands the "why" behind the "what."</p>
+                </div>
+                <!-- Item 7 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="monitor-play" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">30-Min Strategy Call</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A live Zoom call with the author of your report to walk through findings and answer questions.</p>
+                </div>
+                <!-- Item 8 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="life-buoy" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">30-Day Ongoing Support</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A limited period of email support after delivery to clarify any implementation details with your dev team.</p>
+                </div>
+                <!-- Item 9 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="lock" class="w-5 h-5 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900">Strict Confidentiality</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Your business logic, app details, and user data are kept strictly confidential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Team -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-slate-900">100% USA-Based. Real Humans.</h2>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                You won't find cheesy stock photos or AI-generated filler here. We are a small but scrappy team of researchers, copywriters, interaction designers, and front-end developers with deep experience at large enterprises and high-growth startups across a wide range of industries.
+            </p>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-500"></i>
+                Proudly designing from the United States
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200" id="pricing">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl relative overflow-hidden">
+                <!-- Background Decoration -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-500 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+                
+                <div class="flex-1 z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">One price. Infinite ROI.</h2>
+                    <p class="text-slate-300 text-lg mb-6">
+                        Stop burning money on ads sending traffic to a leaky bucket. Fix your UX first.
+                    </p>
+                    <ul class="space-y-3 text-slate-200">
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-400"></i> Comprehensive 10+ page teardown
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-400"></i> User testing videos & Zoom call
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-400"></i> Delivered in two weeks
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl w-full md:w-80 text-center z-10">
+                    <div class="text-slate-500 font-medium mb-2">One-Time Payment</div>
+                    <div class="text-5xl font-bold text-slate-900 mb-2 flex justify-center items-start">
+                        <span class="text-2xl mt-1 text-slate-400">$</span>500
+                    </div>
+                    <p class="text-sm text-brand-600 font-medium mb-6">10-Day Money Back Guarantee</p>
+                    <a href="#" class="block w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold transition-colors text-lg mb-3 shadow-lg hover:shadow-xl shadow-brand-500/30">
+                        Book Your Teardown
+                    </a>
+                    <p class="text-xs text-slate-400 flex items-center justify-center gap-1">
+                        <i data-lucide="shield-check" class="w-3 h-3"></i> Just let us know how we can improve.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center text-slate-900">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h4 class="font-bold text-lg text-slate-900 mb-2">Are you redesigning my whole product?</h4>
+                    <p class="text-slate-600">No. It takes a long time to ramp up in a new business. We spend our time evaluating the usability, interactions, and workflows of your app. We won't make up new features, or redesign your logo or branding. You can choose whether we focus broadly on a general health audit, or dive deep into redesigning a specific, critical workflow (with visual examples).</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h4 class="font-bold text-lg text-slate-900 mb-2">What do you need from me?</h4>
+                    <p class="text-slate-600">Let us know if you want a general audit or a deep-dive into a specific workflow. If the latter, send us a list of 1-3 views or pages that need the most attention. If your app is behind a login, just create a test account with pre-populated data that we'll work against.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h4 class="font-bold text-lg text-slate-900 mb-2">Who is this for?</h4>
+                    <p class="text-slate-600">SaaS founders, e-commerce store owners, and small to medium-sized businesses without dedicated UX talent who need clear, actionable recommendations.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h4 class="font-bold text-lg text-slate-900 mb-2">What's your refund policy?</h4>
+                    <p class="text-slate-600">We offer a 10-day money-back guarantee. If you don't find our insights valuable, just let us know how we can improve and we'll refund your purchase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-10 border-t border-slate-200 text-center">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col items-center">
+            <div class="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900 mb-4">
+                <i data-lucide="scan-line" class="w-6 h-6 text-brand-600"></i>
+                UX Roast
+            </div>
+            <p class="text-slate-500 mb-6">Helping founders stop leaking revenue through bad design.</p>
+            <div class="flex gap-6">
+                <a href="#" class="text-slate-400 hover:text-brand-600"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-brand-600"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-brand-600"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+            <p class="text-sm text-slate-400 mt-8">© 2026 UX Roast. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
